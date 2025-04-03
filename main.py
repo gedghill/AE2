@@ -5,6 +5,7 @@ import streamlit as st
 import yfinance as yf
 from price_trends import get_btc_trend, get_wif_trend
 from fetch_data import fetch_data
+
 data = fetch_data()
 fig = get_btc_trend(data)
 wif = get_wif_trend(data)

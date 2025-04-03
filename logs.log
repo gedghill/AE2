@@ -1,0 +1,180 @@
+2025-04-03 13:11:52,688:WARNING:
+'prophet' is a soft dependency and not included in the pycaret installation. Please run: `pip install prophet` to install.
+2025-04-03 13:11:55,241:INFO:PyCaret TSForecastingExperiment
+2025-04-03 13:11:55,241:INFO:Logging name: ts-default-name
+2025-04-03 13:11:55,241:INFO:ML Usecase: MLUsecase.TIME_SERIES
+2025-04-03 13:11:55,241:INFO:version 3.3.2
+2025-04-03 13:11:55,241:INFO:Initializing setup()
+2025-04-03 13:11:55,241:INFO:self.USI: aaa4
+2025-04-03 13:11:55,241:INFO:self._variable_keys: {'y_train', 'y_train_transformed', 'significant_sps', 'X_train_transformed', '_available_plots', 'fold_generator', 'enforce_exogenous', 'gpu_n_jobs_param', 'exogenous_present', 'approach_type', 'pipeline', 'y_test', 'y_transformed', 'logging_param', 'seasonality_present', 'data', 'y', 'idx', 'exp_name_log', '_ml_usecase', 'fh', 'X_test_transformed', 'fold_param', 'X_train', 'index_type', 'memory', 'candidate_sps', 'seed', 'X_transformed', 'all_sps_to_use', 'enforce_pi', 'primary_sp_to_use', 'gpu_param', 'exp_id', 'USI', 'strictly_positive', 'significant_sps_no_harmonics', 'X_test', 'html_param', 'log_plots_param', 'model_engines', 'n_jobs_param', 'X', 'y_test_transformed'}
+2025-04-03 13:11:55,241:INFO:Checking environment
+2025-04-03 13:11:55,241:INFO:python_version: 3.10.14
+2025-04-03 13:11:55,241:INFO:python_build: ('main', 'May  6 2024 19:44:50')
+2025-04-03 13:11:55,241:INFO:machine: AMD64
+2025-04-03 13:11:55,253:INFO:platform: Windows-10-10.0.26100-SP0
+2025-04-03 13:11:55,253:INFO:Memory: svmem(total=16942501888, available=3001835520, percent=82.3, used=13940666368, free=3001835520)
+2025-04-03 13:11:55,253:INFO:Physical Core: 4
+2025-04-03 13:11:55,253:INFO:Logical Core: 8
+2025-04-03 13:11:55,253:INFO:Checking libraries
+2025-04-03 13:11:55,253:INFO:System:
+2025-04-03 13:11:55,253:INFO:    python: 3.10.14 | packaged by Anaconda, Inc. | (main, May  6 2024, 19:44:50) [MSC v.1916 64 bit (AMD64)]
+2025-04-03 13:11:55,253:INFO:executable: C:\Users\gedgh\anaconda3\envs\COM731\python.exe
+2025-04-03 13:11:55,253:INFO:   machine: Windows-10-10.0.26100-SP0
+2025-04-03 13:11:55,253:INFO:PyCaret required dependencies:
+2025-04-03 13:11:55,885:INFO:                 pip: 24.2
+2025-04-03 13:11:55,885:INFO:          setuptools: 75.1.0
+2025-04-03 13:11:55,885:INFO:             pycaret: 3.3.2
+2025-04-03 13:11:55,885:INFO:             IPython: 8.27.0
+2025-04-03 13:11:55,885:INFO:          ipywidgets: 8.1.5
+2025-04-03 13:11:55,885:INFO:                tqdm: 4.67.1
+2025-04-03 13:11:55,885:INFO:               numpy: 1.26.4
+2025-04-03 13:11:55,885:INFO:              pandas: 2.1.4
+2025-04-03 13:11:55,885:INFO:              jinja2: 3.1.4
+2025-04-03 13:11:55,885:INFO:               scipy: 1.11.4
+2025-04-03 13:11:55,885:INFO:              joblib: 1.3.2
+2025-04-03 13:11:55,885:INFO:             sklearn: 1.4.2
+2025-04-03 13:11:55,885:INFO:                pyod: 2.0.4
+2025-04-03 13:11:55,885:INFO:            imblearn: 0.13.0
+2025-04-03 13:11:55,885:INFO:   category_encoders: 2.7.0
+2025-04-03 13:11:55,885:INFO:            lightgbm: 4.6.0
+2025-04-03 13:11:55,885:INFO:               numba: 0.61.0
+2025-04-03 13:11:55,885:INFO:            requests: 2.32.3
+2025-04-03 13:11:55,885:INFO:          matplotlib: 3.7.5
+2025-04-03 13:11:55,885:INFO:          scikitplot: 0.3.7
+2025-04-03 13:11:55,885:INFO:         yellowbrick: 1.5
+2025-04-03 13:11:55,885:INFO:              plotly: 5.24.1
+2025-04-03 13:11:55,885:INFO:    plotly-resampler: Not installed
+2025-04-03 13:11:55,885:INFO:             kaleido: 0.2.1
+2025-04-03 13:11:55,885:INFO:           schemdraw: 0.15
+2025-04-03 13:11:55,885:INFO:         statsmodels: 0.14.4
+2025-04-03 13:11:55,885:INFO:              sktime: 0.26.0
+2025-04-03 13:11:55,885:INFO:               tbats: 1.1.3
+2025-04-03 13:11:55,885:INFO:            pmdarima: 2.0.4
+2025-04-03 13:11:55,885:INFO:              psutil: 5.9.0
+2025-04-03 13:11:55,885:INFO:          markupsafe: 2.1.3
+2025-04-03 13:11:55,885:INFO:             pickle5: Not installed
+2025-04-03 13:11:55,885:INFO:         cloudpickle: 3.1.1
+2025-04-03 13:11:55,885:INFO:         deprecation: 2.1.0
+2025-04-03 13:11:55,885:INFO:              xxhash: 3.5.0
+2025-04-03 13:11:55,887:INFO:           wurlitzer: Not installed
+2025-04-03 13:11:55,887:INFO:PyCaret optional dependencies:
+2025-04-03 13:11:59,656:INFO:                shap: 0.44.1
+2025-04-03 13:11:59,656:INFO:           interpret: 0.6.10
+2025-04-03 13:11:59,656:INFO:                umap: 0.5.7
+2025-04-03 13:11:59,656:INFO:     ydata_profiling: 4.16.1
+2025-04-03 13:11:59,656:INFO:  explainerdashboard: 0.4.8
+2025-04-03 13:11:59,656:INFO:             autoviz: Not installed
+2025-04-03 13:11:59,656:INFO:           fairlearn: 0.7.0
+2025-04-03 13:11:59,656:INFO:          deepchecks: Not installed
+2025-04-03 13:11:59,656:INFO:             xgboost: 3.0.0
+2025-04-03 13:11:59,656:INFO:            catboost: 1.2.7
+2025-04-03 13:11:59,656:INFO:              kmodes: 0.12.2
+2025-04-03 13:11:59,656:INFO:             mlxtend: 0.23.4
+2025-04-03 13:11:59,656:INFO:       statsforecast: 1.5.0
+2025-04-03 13:11:59,656:INFO:        tune_sklearn: Not installed
+2025-04-03 13:11:59,656:INFO:                 ray: Not installed
+2025-04-03 13:11:59,656:INFO:            hyperopt: 0.2.7
+2025-04-03 13:11:59,656:INFO:              optuna: 4.2.1
+2025-04-03 13:11:59,656:INFO:               skopt: 0.10.2
+2025-04-03 13:11:59,656:INFO:              mlflow: 2.21.3
+2025-04-03 13:11:59,656:INFO:              gradio: 5.23.3
+2025-04-03 13:11:59,656:INFO:             fastapi: 0.115.12
+2025-04-03 13:11:59,656:INFO:             uvicorn: 0.34.0
+2025-04-03 13:11:59,656:INFO:              m2cgen: 0.10.0
+2025-04-03 13:11:59,656:INFO:           evidently: 0.4.40
+2025-04-03 13:11:59,656:INFO:               fugue: 0.8.7
+2025-04-03 13:11:59,656:INFO:           streamlit: Not installed
+2025-04-03 13:11:59,656:INFO:             prophet: Not installed
+2025-04-03 13:11:59,656:INFO:None
+2025-04-03 13:11:59,675:INFO:Set Forecast Horizon.
+2025-04-03 13:11:59,675:INFO:Set up Train-Test Splits.
+2025-04-03 13:16:19,647:WARNING:
+'prophet' is a soft dependency and not included in the pycaret installation. Please run: `pip install prophet` to install.
+2025-04-03 13:16:21,716:INFO:PyCaret TSForecastingExperiment
+2025-04-03 13:16:21,716:INFO:Logging name: ts-default-name
+2025-04-03 13:16:21,716:INFO:ML Usecase: MLUsecase.TIME_SERIES
+2025-04-03 13:16:21,717:INFO:version 3.3.2
+2025-04-03 13:16:21,717:INFO:Initializing setup()
+2025-04-03 13:16:21,717:INFO:self.USI: 1736
+2025-04-03 13:16:21,717:INFO:self._variable_keys: {'USI', 'X_train', 'all_sps_to_use', 'strictly_positive', 'log_plots_param', 'gpu_param', 'X_transformed', 'X', 'fh', 'enforce_pi', 'candidate_sps', 'X_train_transformed', 'significant_sps', 'y_test', 'enforce_exogenous', 'exogenous_present', 'pipeline', 'y', 'primary_sp_to_use', 'X_test_transformed', 'significant_sps_no_harmonics', 'data', 'seed', 'fold_param', 'index_type', 'exp_id', '_available_plots', 'X_test', 'fold_generator', 'idx', 'y_test_transformed', 'html_param', 'y_train_transformed', '_ml_usecase', 'n_jobs_param', 'model_engines', 'memory', 'y_transformed', 'gpu_n_jobs_param', 'approach_type', 'exp_name_log', 'seasonality_present', 'y_train', 'logging_param'}
+2025-04-03 13:16:21,717:INFO:Checking environment
+2025-04-03 13:16:21,717:INFO:python_version: 3.10.14
+2025-04-03 13:16:21,717:INFO:python_build: ('main', 'May  6 2024 19:44:50')
+2025-04-03 13:16:21,718:INFO:machine: AMD64
+2025-04-03 13:16:21,727:INFO:platform: Windows-10-10.0.26100-SP0
+2025-04-03 13:16:21,727:INFO:Memory: svmem(total=16942501888, available=2990096384, percent=82.4, used=13952405504, free=2990096384)
+2025-04-03 13:16:21,727:INFO:Physical Core: 4
+2025-04-03 13:16:21,727:INFO:Logical Core: 8
+2025-04-03 13:16:21,727:INFO:Checking libraries
+2025-04-03 13:16:21,727:INFO:System:
+2025-04-03 13:16:21,727:INFO:    python: 3.10.14 | packaged by Anaconda, Inc. | (main, May  6 2024, 19:44:50) [MSC v.1916 64 bit (AMD64)]
+2025-04-03 13:16:21,727:INFO:executable: C:\Users\gedgh\anaconda3\envs\COM731\python.exe
+2025-04-03 13:16:21,727:INFO:   machine: Windows-10-10.0.26100-SP0
+2025-04-03 13:16:21,727:INFO:PyCaret required dependencies:
+2025-04-03 13:16:22,282:INFO:                 pip: 24.2
+2025-04-03 13:16:22,282:INFO:          setuptools: 75.1.0
+2025-04-03 13:16:22,282:INFO:             pycaret: 3.3.2
+2025-04-03 13:16:22,282:INFO:             IPython: 8.27.0
+2025-04-03 13:16:22,282:INFO:          ipywidgets: 8.1.5
+2025-04-03 13:16:22,282:INFO:                tqdm: 4.67.1
+2025-04-03 13:16:22,282:INFO:               numpy: 1.26.4
+2025-04-03 13:16:22,282:INFO:              pandas: 2.1.4
+2025-04-03 13:16:22,282:INFO:              jinja2: 3.1.4
+2025-04-03 13:16:22,282:INFO:               scipy: 1.11.4
+2025-04-03 13:16:22,282:INFO:              joblib: 1.3.2
+2025-04-03 13:16:22,282:INFO:             sklearn: 1.4.2
+2025-04-03 13:16:22,282:INFO:                pyod: 2.0.4
+2025-04-03 13:16:22,282:INFO:            imblearn: 0.13.0
+2025-04-03 13:16:22,282:INFO:   category_encoders: 2.7.0
+2025-04-03 13:16:22,282:INFO:            lightgbm: 4.6.0
+2025-04-03 13:16:22,282:INFO:               numba: 0.61.0
+2025-04-03 13:16:22,282:INFO:            requests: 2.32.3
+2025-04-03 13:16:22,282:INFO:          matplotlib: 3.7.5
+2025-04-03 13:16:22,282:INFO:          scikitplot: 0.3.7
+2025-04-03 13:16:22,282:INFO:         yellowbrick: 1.5
+2025-04-03 13:16:22,282:INFO:              plotly: 5.24.1
+2025-04-03 13:16:22,282:INFO:    plotly-resampler: Not installed
+2025-04-03 13:16:22,282:INFO:             kaleido: 0.2.1
+2025-04-03 13:16:22,282:INFO:           schemdraw: 0.15
+2025-04-03 13:16:22,282:INFO:         statsmodels: 0.14.4
+2025-04-03 13:16:22,282:INFO:              sktime: 0.26.0
+2025-04-03 13:16:22,282:INFO:               tbats: 1.1.3
+2025-04-03 13:16:22,282:INFO:            pmdarima: 2.0.4
+2025-04-03 13:16:22,282:INFO:              psutil: 5.9.0
+2025-04-03 13:16:22,282:INFO:          markupsafe: 2.1.3
+2025-04-03 13:16:22,282:INFO:             pickle5: Not installed
+2025-04-03 13:16:22,282:INFO:         cloudpickle: 3.1.1
+2025-04-03 13:16:22,282:INFO:         deprecation: 2.1.0
+2025-04-03 13:16:22,282:INFO:              xxhash: 3.5.0
+2025-04-03 13:16:22,282:INFO:           wurlitzer: Not installed
+2025-04-03 13:16:22,282:INFO:PyCaret optional dependencies:
+2025-04-03 13:16:25,760:INFO:                shap: 0.44.1
+2025-04-03 13:16:25,760:INFO:           interpret: 0.6.10
+2025-04-03 13:16:25,761:INFO:                umap: 0.5.7
+2025-04-03 13:16:25,761:INFO:     ydata_profiling: 4.16.1
+2025-04-03 13:16:25,761:INFO:  explainerdashboard: 0.4.8
+2025-04-03 13:16:25,761:INFO:             autoviz: Not installed
+2025-04-03 13:16:25,761:INFO:           fairlearn: 0.7.0
+2025-04-03 13:16:25,761:INFO:          deepchecks: Not installed
+2025-04-03 13:16:25,761:INFO:             xgboost: 3.0.0
+2025-04-03 13:16:25,762:INFO:            catboost: 1.2.7
+2025-04-03 13:16:25,762:INFO:              kmodes: 0.12.2
+2025-04-03 13:16:25,762:INFO:             mlxtend: 0.23.4
+2025-04-03 13:16:25,762:INFO:       statsforecast: 1.5.0
+2025-04-03 13:16:25,762:INFO:        tune_sklearn: Not installed
+2025-04-03 13:16:25,762:INFO:                 ray: Not installed
+2025-04-03 13:16:25,762:INFO:            hyperopt: 0.2.7
+2025-04-03 13:16:25,763:INFO:              optuna: 4.2.1
+2025-04-03 13:16:25,763:INFO:               skopt: 0.10.2
+2025-04-03 13:16:25,763:INFO:              mlflow: 2.21.3
+2025-04-03 13:16:25,763:INFO:              gradio: 5.23.3
+2025-04-03 13:16:25,763:INFO:             fastapi: 0.115.12
+2025-04-03 13:16:25,763:INFO:             uvicorn: 0.34.0
+2025-04-03 13:16:25,763:INFO:              m2cgen: 0.10.0
+2025-04-03 13:16:25,763:INFO:           evidently: 0.4.40
+2025-04-03 13:16:25,764:INFO:               fugue: 0.8.7
+2025-04-03 13:16:25,764:INFO:           streamlit: Not installed
+2025-04-03 13:16:25,764:INFO:             prophet: Not installed
+2025-04-03 13:16:25,764:INFO:None
+2025-04-03 13:16:25,767:INFO:Set Forecast Horizon.
+2025-04-03 13:16:25,767:INFO:Set up Train-Test Splits.
