@@ -2,8 +2,8 @@
 from pycaret.time_series import TSForecastingExperiment
 import pandas as pd
 import matplotlib.pyplot as plt
-import os
-os.environ["PYCARET_CUSTOM_OBJECTIVE"] = "False"  # Disable Dask usage
+#import os
+#os.environ["PYCARET_CUSTOM_OBJECTIVE"] = "False"  # Disable Dask usage
 
 
 
@@ -20,8 +20,8 @@ try:
     models = {
         'arima': {'order': (1,1,1)},
         'prophet': {'seasonality_mode': 'multiplicative'},
-        'xgboost': {'max_depth': 6, 'n_estimators': 100},
-        'lstm_cds': {'n_hidden': 20}  # Using LSTM from NeuralForecast
+        #'xgboost': {'max_depth': 6, 'n_estimators': 100},
+        #'lstm_cds': {'n_hidden': 20}  # Using LSTM from NeuralForecast
     }
     
     # Train and compare models

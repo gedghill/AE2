@@ -1,10 +1,9 @@
 def fetch_data():
-    import plotly.graph_objects as go
+    #import plotly.graph_objects as go
     from datetime import datetime, timedelta
     import pandas as pd
-    import streamlit as st
     import yfinance as yf
-    from price_trends import get_btc_trend
+    #from price_trends import get_btc_trend
 
     # Fetch Data
     crypto_list = [
