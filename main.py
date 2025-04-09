@@ -38,8 +38,8 @@ s = setup(data=btc,
           seasonal_period='D',
           #fold_spans="adaptive",
           numeric_imputation_target = 'drift')
-prophet = create_model('prophet')
-arima = create_model('arima')
+prophet = create_model('prophet', verbose = False)
+arima = create_model('arima', verbose=False)
 tuned_prophet = tune_model(prophet)
 tuned_arima = tune_model(arima)
 # Predictions
