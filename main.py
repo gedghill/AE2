@@ -27,7 +27,7 @@ st.write("""ETH-USD Close Price Trend""")
 st.plotly_chart(eth, theme='streamlit', use_container_width=True)
 #t.plotly_chart(figf, theme='streamlit', use_container_width=True)
 
-btc = data.loc[:,'BTC-USD']
+btc = data[['BTC-USD']]
 # Set up PyCaret environment
 s = setup(data=btc, 
           target = 'BTC-USD',
