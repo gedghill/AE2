@@ -37,17 +37,36 @@ tab1, tab2 = st.tabs(["Live Prices","Forecast"])
 with tab1:
     st.header('Live Crypto Prices')
 
+    # Display line chart based on selected coin
     selected_symbol = st.selectbox("Select a Cryptocurrency", crypto_list, key='price_chart_generator')
     fig_trend = get_price_trend(all_data_df, selected_symbol)
     st.plotly_chart(fig_trend, use_container_width=True, key='trend_lines')
+
+    # Display candlestick chart based on selected coin
     st.subheader("Candlestick Chart")
     fig_candlestick = plot_candlestick(all_data_df, selected_symbol)
     st.plotly_chart(fig_candlestick, use_container_width=True, key='candlestick_chart')
+
+    # Display data table for selected coin
     st.subheader("Data Table")
-    # Display filtered table
+    
     symbol_columns = all_data_df.filter(like=selected_symbol)
     filtered_df = pd.concat([all_data_df['Date'], symbol_columns], axis=1)
     st.dataframe(filtered_df, height=400)
+
+    # Display news articles
+    articles = [
+    {"title": "Bitcoin breaks through $95k amidst ongoing rally", "url": "https://crypto.news/bitcoin-breaks-through-95k-amidst-ongoing-rally/", "summary": "Bitcoin has surpassed the $95,000 as it continues to climb higher.", "date":"Published: April 30th, 2025 01:43 PM GMT+1"},
+    {"title": "Ethereum price can crash to $1,000 in 2025: Polymarket", "url": "https://crypto.news/ethereum-price-can-crash-to-1000-in-2025-polymarket/", "summary": "Ethereum price has stalled below 2,000USD this week, and some signals indicate a potential drop to $1,000 before it reaches $4,000.","date":"Published April 29th, 2025 05:32 PM GMT+1"},
+    {"title": "BNB Chain posts strong Q1 performance despite 15% market cap dip: Messari", "url": "https://crypto.news/bnb-chain-posts-strong-q1-performance-despite-15-market-cap-dip-messari/", "summary": "BNB Chain delivered a standout Q1 performance in revenue and on-chain metrics, even as its market cap dipped almost 15%.","date":"Published April 30th, 2025 at 09:56 AM GMT+1"}
+]
+
+    st.markdown("### Crypto News Highlights")
+
+    for article in articles:
+        st.markdown(f"**[{article['title']}]({article['url']})**")
+        st.markdown(f"*{article['summary']}*\n")
+        st.markdown(f"*{article['date']}*\n")
 
 # ===================
 # TAB 2: FORECAST
