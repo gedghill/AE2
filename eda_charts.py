@@ -44,3 +44,15 @@ def get_volume_chart(all_data_df:pd.DataFrame, symbol:str):
     )
 
     return fig
+
+def get_time_decomp(all_data_df:pd.DataFrame, symbol:str):
+    from statsmodels.tsa.seasonal import seasonal_decompose
+    import matplotlib.pyplot as plt
+
+    # Decompose BTC-USD series
+    result = seasonal_decompose(all_data_df[f'Close_{symbol}'], model='additive', period=30)  # assuming weekly seasonality
+
+    # Plot the decomposition
+    fig = result.plot()
+    fig.set_size_inches(10, 8)
+    return fig

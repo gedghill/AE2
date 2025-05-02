@@ -13,7 +13,9 @@ from fetch_data import fetch_data
 from candlestick import fetch_all_data, plot_candlestick
 from price_trends import get_btc_trend, get_wif_trend, get_bnb_trend, get_eth_trend
 from crypto_trends import get_price_trend
-from eda_charts import get_scatter, get_histogram, get_volume_chart
+from eda_charts import get_scatter, get_histogram, get_volume_chart, get_time_decomp
+from correlation import get_corr_matrix, get_selected_corr, get_top_4_positive, get_top_4_negative, get_kmeans_tables
+
 
 
 crypto_list = [
@@ -30,7 +32,7 @@ all_data_df = fetch_all_data()
 
 st.title('SoliGence Crypto Platform')
 
-tab1, tab2, tab3 = st.tabs(["Live Prices","Exploratory Data Analysis", "Forecast"])
+tab1, tab2, tab3, tab4 = st.tabs(["Live Prices","Exploratory Data Analysis","Clustering and Correlation", "Forecast"])
 
 # ====================
 #TAB 1: LIVE PRICES
@@ -69,6 +71,8 @@ with tab1:
         st.markdown(f"**[{article['title']}]({article['url']})**")
         st.markdown(f"*{article['summary']}*\n")
         st.markdown(f"*{article['date']}*\n")
+
+
 
 # ==================
 # TAB 2: EDA
@@ -111,7 +115,23 @@ with tab2:
         volume_crypto = st.selectbox('Choose a crypto:',crypto_list, key='volume_chart')
         volume_fig = get_volume_chart(all_data_df,volume_crypto)
         st.plotly_chart(volume_fig, use_container_width=True, key='volume_over_time')
+    elif eda_option == 'Time Series Decomposition':
+        st.subheader('Select a cryptocurrency to view its time series decomposition chart')
+        time_decomp = st.selectbox('Choose crypto:', crypto_list,key='time_decomp_select')
+        decomp_fig = get_time_decomp(all_data_df,time_decomp)
+        st.pyplot(decomp_fig,use_container_width=True)
 
+
+
+# ===================
+# TAB 3: CLUSTERING AND CORRELATION
+# ===================
+
+
+with tab3:
+    st.header('Results of K-Means Clustering and Correlation Analysis')
+    st.selectbox('Choose crypto:',chosen_crypto_list, key='corr_tables')
+    
 
 
 
@@ -123,7 +143,7 @@ with tab2:
 # TAB 3: FORECAST
 # ===================
 
-with tab3:
+with tab4:
     selected_symbol = st.selectbox("Select a Cryptocurrency", chosen_crypto_list, key='forecast_selection')
     # Define options
     options = [30, 7, 1]
