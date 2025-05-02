@@ -130,8 +130,13 @@ with tab2:
 
 with tab3:
     st.header('Results of K-Means Clustering and Correlation Analysis')
-    st.selectbox('Choose crypto:',chosen_crypto_list, key='corr_tables')
-    
+    st.subheader('Choose a cryptocurrency to see its top 4 positive and top 4 negative correlated coins.')
+    corr_crypto = st.selectbox('Choose crypto:',chosen_crypto_list, key='corr_tables')
+    top_positive = get_top_4_positive(data,corr_crypto)
+    st.dataframe(top_positive)
+
+
+
 
 
 
