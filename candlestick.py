@@ -41,7 +41,6 @@ def fetch_all_data():
     # 4. Sort by date if needed
     df = df.sort_values(by='Date')
     return df
-all_data_df = fetch_all_data()
 
 #Define function for creating candlestick charts
 def plot_candlestick(all_data_df: pd.DataFrame, symbol: str):

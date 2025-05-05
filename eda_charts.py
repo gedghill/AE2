@@ -26,8 +26,8 @@ def get_histogram(all_data_df:pd.DataFrame,symbol:str):
     all_data_df,
     x=f'Close_{symbol}',
     nbins=50,  # You can adjust the number of bins
-    title='Histogram of BTC-USD Close Prices',
-    labels={'Close_BTC-USD': 'BTC-USD Close Price'},
+    title=f'Histogram of{symbol} Close Prices',
+    labels={f'Close_{symbol}': f'{symbol} Close Price'},
     color_discrete_sequence=['blue'],  # Set bin color
     )
     return fig 
@@ -56,3 +56,4 @@ def get_time_decomp(all_data_df:pd.DataFrame, symbol:str):
     fig = result.plot()
     fig.set_size_inches(10, 8)
     return fig
+

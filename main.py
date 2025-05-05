@@ -130,17 +130,34 @@ with tab2:
 
 with tab3:
     st.header('Results of K-Means Clustering and Correlation Analysis')
-    st.subheader('Choose a cryptocurrency to see its top 4 positive and top 4 negative correlated coins.')
+    # Display selectbox so user can see top 4 positive correlated coins to chosen coin
+    st.text('Choose a cryptocurrency to see its top 4 positive correlated coins.')
     corr_crypto = st.selectbox('Choose crypto:',chosen_crypto_list, key='corr_tables')
     top_positive = get_top_4_positive(data,corr_crypto)
-    st.dataframe(top_positive)
+    st.dataframe(top_positive, width=300)
+    # Display selectbox so user can see top 4 negative correlated coins to chosen coin
+    st.text('Choose a cryptocurrency to see its top 4 negative correlated coins.')
+    corr_crypto_neg = st.selectbox('Choose crypto:',chosen_crypto_list, key='corr_tables_negative')
+    top_negative = get_top_4_negative(data, corr_crypto_neg)
+    st.dataframe(top_negative, width=300)
 
 
-
-
-
-
-
+    st.subheader('Correlation Matrix for all 30 Coins')
+    corr_fig = get_corr_matrix(data)
+    st.plotly_chart(corr_fig, use_container_width=True, key='corr_chart')
+    
+    # Unpack all kmeans results
+    chosen_coins_df, all_clusters_df, clusters_fig = get_kmeans_tables(data)
+    
+    # Display k-means table with PCA results and cluster labels
+    st.subheader('2D PCA and K-Means Clustering Result')
+    st.dataframe(all_clusters_df)
+    # Display selected coins from each cluster
+    st.subheader('Randomly chosen coins from each cluster:')
+    st.dataframe(chosen_coins_df)
+    # Display plotly chart with clusters
+    st.subheader('Clustered coins:')
+    st.plotly_chart(clusters_fig, use_container_width=True, key='clusters_figure')
 
 
 
